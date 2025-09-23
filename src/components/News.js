@@ -2,243 +2,7 @@ import React, { Component } from 'react'
 import NewsItem from './NewsItem'
 
 export class News extends Component {
-    articles = [
-        {
-            "source": {
-                "id": null,
-                "name": "Variety"
-            },
-            "author": "Jordan Moreau",
-            "title": "Tom Holland Suffers Concussion on ‘Spider-Man: Brand New Day’ Set, Pauses Filming - Variety",
-            "description": "Tom Holland suffered a concussion on the set of \"Spider-Man: Brand New Day\" on Friday, Variety can confirm.",
-            "url": "https://variety.com/2025/film/news/tom-holland-concussion-spider-man-brand-new-day-1236525814/",
-            "urlToImage": "https://variety.com/wp-content/uploads/2025/08/Spider-Man.jpg?w=1000&h=563&crop=1",
-            "publishedAt": "2025-09-22T01:18:00Z",
-            "content": "Tom Holland suffered a mild concussion on the set of his upcoming superhero movie “Spider-Man: Brand New Day” on Friday, Variety can confirm.\r\nThe star will take a break from filming as a precaution … [+1297 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "CNBC"
-            },
-            "author": "Anniek Bao",
-            "title": "China leaves benchmark lending rates unchanged as expected, despite Fed rate cut - CNBC",
-            "description": "The People's Bank of China kept the one-year loan prime rate unchanged at 3.0% while the five-year LPR at 3.5%, respectively, according to a statement Monday.",
-            "url": "https://www.cnbc.com/2025/09/22/china-leaves-benchmark-lending-rates-lpr-loan-interest-unchanged-despite-fed-rate-cut.html",
-            "urlToImage": "https://image.cnbcfm.com/api/v1/image/108201805-1758500997791-gettyimages-1279912977-vcg111302348190.jpeg?v=1758501008&w=1920&h=1080",
-            "publishedAt": "2025-09-22T01:10:00Z",
-            "content": "China kept its benchmark lending rates unchanged for the fourth straight month on Monday despite the U.S. Federal Reserve's interest rate cut last week.\r\nThe People's Bank of China kept the one-year … [+3084 chars]"
-        },
-        {
-            "source": {
-                "id": "abc-news",
-                "name": "ABC News"
-            },
-            "author": "ABC News - Breaking News, Latest News and Videos",
-            "title": "Key takeaways from Charlie Kirk's memorial service - ABC News - Breaking News, Latest News and Videos",
-            "description": null,
-            "url": "https://abcnews.go.com/Politics/key-takeaways-charlie-kirks-memorial-service/story?id\\\\u003d125802466",
-            "urlToImage": null,
-            "publishedAt": "2025-09-22T00:56:15Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "CBS Sports"
-            },
-            "author": "Cody Benjamin",
-            "title": "Giants vs. Chiefs live updates: Score, analysis, highlights for 'Sunday Night Football' - CBS Sports",
-            "description": "It's a battle of winless teams on Sunday night as New York hosts Kansas City",
-            "url": "https://www.cbssports.com/nfl/news/giants-vs-chiefs-live-updates-score-analysis-highlights-for-sunday-night-football/live/",
-            "urlToImage": "https://sportshub.cbsistatic.com/i/r/2025/09/05/4137c802-90f9-49b6-bf8a-6d5b81475589/thumbnail/1200x675/bb6c9cafe0b94dcf8ed631e9140c936f/patrick-mahomes-chiefs-imagn-images-1.jpg",
-            "publishedAt": "2025-09-22T00:33:08Z",
-            "content": "Don't look now, but the New York Giants have the same record as the Kansas City Chiefs. Despite advancing to five of the last six Super Bowls, the reigning AFC champions are one of the NFL's winless … [+1010 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "DallasCowboys.com"
-            },
-            "author": null,
-            "title": "First-quarter ankle injury ends CeeDee Lamb's day in Chicago - Dallas Cowboys | Official Site of the Dallas Cowboys",
-            "description": "A left ankle injury suffered in the first quarter ended Cowboys WR CeeDee Lamb's day in Chicago.",
-            "url": "https://www.dallascowboys.com/news/first-quarter-ankle-injury-ends-ceedee-lamb-s-day-in-chicago",
-            "urlToImage": "https://static.clubs.nfl.com/image/upload/t_editorial_landscape_12_desktop/cowboys/nr1sojzkn2xvshgkvyp8",
-            "publishedAt": "2025-09-22T00:16:04Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "NPR"
-            },
-            "author": "",
-            "title": "German and Swedish jets intercept Russian military plane over Baltic Sea - NPR",
-            "description": "This was the latest event after a series of incursions by Russian military aircraft into NATO airspace in September, leading to heightened tensions between NATO and Russia.",
-            "url": "https://www.npr.org/2025/09/21/nx-s1-5549406/russia-nato-plane-baltic-sea-germany-sweden",
-            "urlToImage": "https://npr.brightspotcdn.com/dims3/default/strip/false/crop/4572x2572+0+476/resize/1400/quality/100/format/jpeg/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Fdb%2F01%2F17d67a0145d496f167b3083ceed2%2Fgettyimages-22200435641.jpg",
-            "publishedAt": "2025-09-22T00:12:32Z",
-            "content": "German and Swedish fighter jets were scrambled to intercept a Russian reconnaissance plane that entered neutral airspace over the Baltic Sea on Sunday morning, officials from Germany and Sweden said.… [+2402 chars]"
-        },
-        {
-            "source": {
-                "id": "associated-press",
-                "name": "Associated Press"
-            },
-            "author": "Gabriela Sá Pessoa",
-            "title": "Brazilians protest against a bill that could lead to a pardon for Bolsonaro and allies - AP News",
-            "description": "Thousands of Brazilians have protested against a possible pardon for former President Jair Bolsonaro and his allies, who were convicted of attempting a coup. Demonstrations took place in all 26 states and the federal district on Sunday. The protests followed …",
-            "url": "https://apnews.com/article/brazil-protest-demonstration-bolsonaro-amnesty-d4ce20e61caaafc31990367c9c96c56c",
-            "urlToImage": "https://dims.apnews.com/dims4/default/becd1f2/2147483647/strip/true/crop/5616x3159+0+293/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fef%2F5c%2F48f76eea24eba52d2dd4b7f8508e%2Ffd98181ac6574bcc960a6fd525c0a0c3",
-            "publishedAt": "2025-09-21T23:34:00Z",
-            "content": "SAO PAULO (AP) Thousands of Brazilians protested in all 26 states and the federal district Sunday against a possible pardon for former President Jair Bolsonaro and his allies, who were convicted of a… [+4418 chars]"
-        },
-        {
-            "source": {
-                "id": "cbs-news",
-                "name": "CBS News"
-            },
-            "author": "Jon  LaPook, Denise  Schrier Cetta, Aliza  Chasan",
-            "title": "Genetically engineered mice could take the bite out of Lyme disease on Nantucket, scientists say - CBS News",
-            "description": "Scientists hope genetically modified mice will curb the spread of Lyme disease. They headed to Nantucket — home to a large population of the mice, ticks and deer spreading Lyme — to pitch their idea.",
-            "url": "https://www.cbsnews.com/news/crispr-modify-mice-target-lyme-disease-60-minutes/",
-            "urlToImage": "https://assets2.cbsnewsstatic.com/hub/i/r/2025/09/21/7b6b163a-1e8c-4c87-9269-c77527466fac/thumbnail/1200x630/6b6a49423fe26d9b411ff7fbafac6fb1/sculpting-evolution-article.jpg",
-            "publishedAt": "2025-09-21T23:00:00Z",
-            "content": "Over the past 40 years, Dr. Timothy Lepore has been the emergency room head, sole surgeon and medical examiner on Nantucket, a small island off Cape Cod, Massachusetts. Today he runs the only private… [+6603 chars]"
-        },
-        {
-            "source": {
-                "id": "cnn",
-                "name": "CNN"
-            },
-            "author": "Mohammed Tawfeeq, Charbel Mallo",
-            "title": "Four US citizens killed, including three children, in Israeli strike on Lebanon, says Lebanese government - CNN",
-            "description": "Four US citizens, including three children, were among five people killed Sunday by an Israeli air strike on southern Lebanon, according to the Lebanese government.",
-            "url": "https://www.cnn.com/2025/09/21/middleeast/israeli-strike-lebanon-us-citizens-killed-latam-intl",
-            "urlToImage": "https://media.cnn.com/api/v1/images/stellar/prod/screenshot-2025-09-21-at-5-40-17-pm.jpg?c=16x9&q=w_800,c_fill",
-            "publishedAt": "2025-09-21T22:42:01Z",
-            "content": "Four US citizens, including three children, were among five people killed Sunday by an Israeli air strike on southern Lebanon, according to the Lebanese government.\r\nIsraels military said it had stru… [+2715 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Energy-reporters.com"
-            },
-            "author": "Eirwen Williams",
-            "title": "\"The Earth Is Tearing Apart\": Indian Plate Splits Beneath Himalayas While Scientists Warn Of Catastrophic Earthquake Risk - Energy Reporters",
-            "description": "Beneath the towering peaks of the Himalayas, a geological phenomenon is quietly reshaping the Indian subcontinent. For 60 million years, the Indian Plate has",
-            "url": "https://www.energy-reporters.com/environment/the-earth-is-tearing-apart-indian-plate-splits-beneath-himalayas-while-scientists-warn-of-catastrophic-earthquake-risk/",
-            "urlToImage": "https://www.energy-reporters.com/wp-content/uploads/2025/09/warning-within-48-hours-massive-fault-will-devastate-himalayas—thousands-face-imminent-chaos-as-region-tearing-apart.jpg",
-            "publishedAt": "2025-09-21T21:00:39Z",
-            "content": "\u003Ctable\u003E\u003Ctr\u003E\u003Ctd\u003EIN A NUTSHELL\u003C/td\u003E\u003C/tr\u003E\u003Ctr\u003E\u003Ctd\u003E\u003Cul\u003E\u003Cli\u003E The Indian Plate is found to be tearing apart beneath the Himalayas, altering seismic risk assessments.\u003C/li\u003E\u003Cli\u003E New seismic studies reveal the … [+7338 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "The Philadelphia Inquirer"
-            },
-            "author": "Jeff McLane",
-            "title": "Eagles grades: Jalen Hurts sparks comeback as passing game comes to life in time to beat the Rams - Inquirer.com",
-            "description": "Most of Hurts' 226 passing yards came in the second half, along with his three touchdown passes. A.J. Brown led the Eagles in receiving with 109 yards and his first touchdown reception of the year.",
-            "url": "https://www.inquirer.com/eagles/eagles-rams-grades-jalen-hurts-aj-brown-offense-kevin-patullo-20250921.html",
-            "urlToImage": "https://www.inquirer.com/resizer/v2/LKAHQTHM7FGA5EWRFHPMOY2SSA.jpg?auth=148a33741f707ace43261ac98a65191de5df6aa7d2f41be9bfd6a7ae137b0fbf&width=760&height=507&smart=true",
-            "publishedAt": "2025-09-21T20:56:41Z",
-            "content": "Instant grades on the Eagles performance in their 33-26 win over the Los Angeles Rams:\r\nJalen Hurts somehow got it done and came up huge with a 4-yard dart to DeVonta Smith on fourth down with 1 minu… [+10511 chars]"
-        },
-        {
-            "source": {
-                "id": "the-verge",
-                "name": "The Verge"
-            },
-            "author": "Terrence O'Brien",
-            "title": "The foldable iPhone might look like two iPhone Airs stuck together - The Verge",
-            "description": "The foldable iPhone might look like two iPhone Airs stuck together and cost over $2,000.",
-            "url": "https://www.theverge.com/news/782366/foldable-details-iphone-air-ifixit-teardown",
-            "urlToImage": "https://platform.theverge.com/wp-content/uploads/sites/2/2025/08/STK071_APPLE_D.jpg?quality=90&strip=all&crop=0%2C10.732984293194%2C100%2C78.534031413613&w=1200",
-            "publishedAt": "2025-09-21T20:49:50Z",
-            "content": "\u003Cul\u003E\u003Cli\u003E\u003C/li\u003E\u003Cli\u003E\u003C/li\u003E\u003Cli\u003E\u003C/li\u003E\u003C/ul\u003E\r\nIts expected to cost over $2,000, but at least it should be pretty durable.\r\nIts expected to cost over $2,000, but at least it should be pretty durable.\r\nWhile i… [+2348 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "Rolling Stone"
-            },
-            "author": "Asawin Suebsaeng, Andrew Perez",
-            "title": "Trump Officials Didn’t Know If His Order To Prosecute Foes Was Meant To Be Secret - Rolling Stone",
-            "description": "Donald Trump surprised members of his administration with public demand that Pam Bondi quickly prosecute Letitia James, Adam Schiff, and James Comey.",
-            "url": "http://www.rollingstone.com/politics/politics-features/trump-bondi-order-prosecute-enemies-james-schiff-comey-1235432027/",
-            "urlToImage": "https://www.rollingstone.com/wp-content/uploads/2025/09/trump-order-one.jpg?w=1600&h=900&crop=1",
-            "publishedAt": "2025-09-21T20:43:47Z",
-            "content": "President Donald Trump surprised members of his administration with his social media outburst Saturday night demanding that Attorney General Pam Bondi quickly move ahead with efforts to prosecute his… [+3155 chars]"
-        },
-        {
-            "source": {
-                "id": "nbc-news",
-                "name": "NBC News"
-            },
-            "author": "Marlene Lenthang",
-            "title": "Tiger handler fatally mauled at Oklahoma preserve - NBC News",
-            "description": "Tiger handler Ryan Easley was fatally mauled in an accident involving a tiger he cared for at an Oklahoma preserve, the wildlife refuge said",
-            "url": "https://www.nbcnews.com/news/us-news/tiger-handler-killed-oklahoma-preserve-rcna232781",
-            "urlToImage": "https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/rockcms/2025-09/250921-tiger-vl-411p-c639d0.jpg",
-            "publishedAt": "2025-09-21T20:41:14Z",
-            "content": "Tiger handler Ryan Easley was fatally mauled in an accident involving a tiger he cared for at an Oklahoma preserve, the wildlife refuge said.\r\nThe attack occurred Saturday at Growler Pines Tiger Pres… [+1172 chars]"
-        },
-        {
-            "source": {
-                "id": "nfl-news",
-                "name": "NFL News"
-            },
-            "author": null,
-            "title": "NFL Week 3 takeaways: What We Learned from Sunday's 14 games - NFL.com",
-            "description": "Around The NFL breaks down what you need to know from Sunday's action in Week 3 of the 2025 NFL season.",
-            "url": "https://www.nfl.com/news/2025-nfl-week-3-takeaways-what-we-learned-from-sunday-s-14-games",
-            "urlToImage": "https://static.www.nfl.com/image/upload/t_editorial_landscape_12_desktop/league/aqd40czhscxsndyqnqyu",
-            "publishedAt": "2025-09-21T20:36:00Z",
-            "content": null
-        },
-        {
-            "source": {
-                "id": "associated-press",
-                "name": "Associated Press"
-            },
-            "author": null,
-            "title": "Harry Styles runs Berlin Marathon in under 3 hours - AP News",
-            "description": "English singer and songwriter Harry Styles ran the Berlin Marathon in under three hours on Sunday. Organizers confirmed to news agency dpa that Styles took part. Local newspaper Der Tagesspiegel was the first to report his participation. The 31-year-old forme…",
-            "url": "https://apnews.com/article/berlin-marathon-harry-styles-1594469e884bc6550d86130517e15d3c",
-            "urlToImage": "https://dims.apnews.com/dims4/default/ee41615/2147483647/strip/true/crop/3696x2079+0+189/resize/1440x810!/quality/90/?url=https%3A%2F%2Fassets.apnews.com%2Fd5%2F4e%2Fb011aecad51ecbf5621dac5b8e4b%2F49cec43f281b4b9aa7d8c67d6e4b694c",
-            "publishedAt": "2025-09-21T20:29:00Z",
-            "content": "BERLIN (AP) English singer and songwriter Harry Styles ran the Berlin Marathon in under three hours on Sunday.\r\nOrganizers confirmed to news agency dpa that Styles took part. Local newspaper Der Tage… [+1036 chars]"
-        },
-        {
-            "source": {
-                "id": "cbs-news",
-                "name": "CBS News"
-            },
-            "author": null,
-            "title": "Taliban rejects Trump's bid to take over Afghan air base that U.S. controlled for almost 20 years - CBS News",
-            "description": "President Trump is renewing his call to reestablish a U.S. presence at Bagram, even saying \"we're talking now to Afghanistan\" about the matter.",
-            "url": "https://www.cbsnews.com/news/trump-bagram-air-force-base-taliban/",
-            "urlToImage": "https://assets1.cbsnewsstatic.com/hub/i/r/2025/09/21/57499b98-8dd4-4ecf-9146-26d734eb63d1/thumbnail/1200x630/db067b5502177ed2476bbf9a9c083d80/ap24227439358341.jpg",
-            "publishedAt": "2025-09-21T20:16:06Z",
-            "content": "The Taliban government on Sunday rejected U.S. President Trump's bid to retake Bagram Air Base, four years after America's chaotic withdrawal from Afghanistan left the sprawling military facility in … [+3429 chars]"
-        },
-        {
-            "source": {
-                "id": null,
-                "name": "PBS"
-            },
-            "author": null,
-            "title": "White House clarifies $100K H-1B visa fee won’t apply to existing holders as Trump stirs anxiety - PBS",
-            "description": "President Donald Trump’s latest plan to overhaul the American immigration system has left some immigrant workers confused, forcing the White House on Saturday to scramble to clarify that a new $100,000 fee on visas for skilled tech workers only applies to new…",
-            "url": "https://www.pbs.org/newshour/politics/white-house-clarifies-100k-h-1b-visa-fee-wont-apply-to-existing-holders-as-trump-stirs-anxiety",
-            "urlToImage": "https://d3i6fh83elv35t.cloudfront.net/static/2025/09/2025-09-19T214530Z_820719079_RC29VGATPIPI_RTRMADP_3_USA-TRUMP-1024x683.jpg",
-            "publishedAt": "2025-09-21T18:44:14Z",
-            "content": "WASHINGTON (AP) President Donald Trumps latest plan to overhaul the American immigration system has left some immigrant workers confused, forcing the White House on Saturday to scramble to clarify th… [+6831 chars]"
-        }
-    ];
-
+    articles = [];
     constructor() {
         super();
         console.log("Hello I am a constructor from News component");
@@ -248,20 +12,45 @@ export class News extends Component {
         }
     }
 
+    async componentDidMount() {
+        console.log("cdm");
+        let url = "https://newsapi.org/v2/everything?q=bitcoin&apiKey=0d163e6fa8044aa5815e5f1df6c897eb";
+        let data = await fetch(url);
+        let parseData = await data.json();
+        this.setState({ articles: parseData.articles })
+    }
+
     render() {
+        console.log("render");
         return (
             <div className="container my-3">
                 <h2>FactFlash - Top Headlines</h2>
                 <div className="row my-4">
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="myDiscription" imageUrl="https://variety.com/wp-content/uploads/2025/08/Spider-Man.jpg?w=1000&h=563&crop=1" newsUrl="TODO" />
-                    </div>
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="myDiscription" />
-                    </div>
-                    <div className="col-md-4">
-                        <NewsItem title="myTitle" description="myDiscription" />
-                    </div>
+                    {this.state.articles.map((element) => {
+
+                        return <div className="col-md-4" key={element.url}>
+                            <NewsItem
+                                mode={this.props.mode}
+                                title={
+                                    element.title
+                                        ? element.title.length > 60
+                                            ? element.title.slice(0, 60) + "..."
+                                            : element.title
+                                        : ""
+                                }
+                                description={
+                                    element.description
+                                        ? element.description.length > 70
+                                            ? element.description.slice(0, 70) + "..."
+                                            : element.description
+                                        : ""
+                                }
+                                imageUrl={element.urlToImage}
+                                newsUrl={element.url}
+                            />
+                        </div>
+
+                    })}
                 </div>
             </div>
         )

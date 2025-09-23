@@ -1,0 +1,13 @@
+body.light-mode {
+  background-color: #f8f9fa;
+  color: #212529;
+}
+
+body.dark-mode {
+  background-color: #212529;
+  color: #f8f9fa;
+}
+
+.card, .navbar {
+  transition: background-color 0.3s, color 0.3s;
+}

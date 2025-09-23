@@ -1,10 +1,15 @@
 import React, { Component } from 'react'
+import { FaSun, FaMoon } from "react-icons/fa";
 
 export class Navbar extends Component {
-  render() {
-    return (
-      <div>
-                <nav className="navbar navbar-expand-lg bg-body-tertiary">
+    render() {
+        const navClass =
+            this.props.mode === "dark"
+                ? "navbar navbar-expand-lg navbar-dark bg-dark"
+                : "navbar navbar-expand-lg navbar-light bg-light";
+        return (
+            <div>
+                <nav className={navClass}>
                     <div className="container-fluid">
                         <a className="navbar-brand" href="/">FactFlash</a>
                         <button
@@ -26,13 +31,21 @@ export class Navbar extends Component {
                                 <li className="nav-item">
                                     <a className="nav-link" href="about">About Us</a>
                                 </li>
-                                </ul>
+                            </ul>
+                            <button
+                                className="btn btn-outline-secondary ms-2"
+                                onClick={this.props.toggleMode}
+                                style={{ fontSize: "1.3rem", display: "flex", alignItems: "center" }}
+                                aria-label="Toggle dark/light mode"
+                            >
+                                {this.props.mode === "dark" ? <FaSun /> : <FaMoon />}
+                            </button>
                         </div>
                     </div>
                 </nav>
             </div>
-    )
-  }
+        )
+    }
 }
 
 export default Navbar
