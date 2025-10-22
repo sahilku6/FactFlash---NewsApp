@@ -33,15 +33,15 @@ export class News extends Component {
                                 mode={this.props.mode}
                                 title={
                                     element.title
-                                        ? element.title.length > 60
-                                            ? element.title.slice(0, 60) + "..."
+                                        ? element.title.length > 85
+                                            ? element.title.slice(0, 85) + "..."
                                             : element.title
                                         : ""
                                 }
                                 description={
                                     element.description
-                                        ? element.description.length > 70
-                                            ? element.description.slice(0, 70) + "..."
+                                        ? element.description.length > 100
+                                            ? element.description.slice(0, 100) + "..."
                                             : element.description
                                         : ""
                                 }
